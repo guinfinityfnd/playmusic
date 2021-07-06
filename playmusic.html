@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bfc3ef21f1.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="#">
+    <title>Play Music</title>
+    <style>
+        body{
+            background-color: rgb(1, 15, 1);
+            /* overflow: hidden; */
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 90vh;
+            justify-content: center;
+        }
+        .playlistcontainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .trackItem{
+            border-bottom: 1px solid yellow;
+            cursor: pointer;
+            color: green;
+            font-size: 20px;
+            padding: 10px 0px;
+            user-select: none;
+        }
+        .currentAndTotalTime{
+            color:#fff;
+            user-select: none;
+        }
+        #progressBar{
+            width: 500px;
+            height: 5px;
+            background-color: #4c5758
+        }
+        #currentProgress{
+            width: 0px;
+            height: 100%;
+            background-color:rgb(230, 20, 20);
+        }
+        .musicPlayer{
+            display: flex;
+            flex-direction: row;
+        }
+        .controls{
+            margin:20px 30px;
+            cursor: pointer;
+            font-size: 30px;
+            color: #fff;
+        }
+        .pauseButton{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="playlistcontainer"></div>
+        <audio src="" class="audiolines">
+            your browser does not support this audio types!
+        </audio>
+        <div class="currentAndTotalTime">00:00 / 00:00</div>
+        <div id="progressBar">
+            <div id="currentProgress"></div>
+        </div>
+        <div class="musicPlayer">
+            <i class="fas fa-step-backward controls previousButton"></i>
+            <i class="fas fa-play-circle controls playButton"></i>
+            <i class="fas fa-pause-circle controls pauseButton"></i>
+            <i class="fas fa-step-forward controls nextButton"></i>
+        </div>
+    </div>   
+    <script src="playmusic.js"></script>
+</body>
+</html>
